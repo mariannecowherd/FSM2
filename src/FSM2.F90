@@ -9,6 +9,7 @@ program FSM2
 
 #include "OPTS.h"
 
+
 #if PROFNC == 1
 use netcdf
 #endif
@@ -48,6 +49,15 @@ use SOILPROPS, only: &
   Vsat                ! Volumetric soil moisture at saturation
 
 implicit none
+
+
+! Variables for clock
+   integer count_0, count_1
+   integer count_rate, count_max
+   double precision time_init, time_final, elapsed_time
+
+
+
 
 ! Grid dimensions
 integer :: &
@@ -152,6 +162,9 @@ integer :: &
   i,                 &! Grid row counter
   j,                 &! Grid column counter
   k                   ! Soil layer counter
+
+
+
 
 namelist    /drive/ met_file,dt,lat,noon,zT,zU
 namelist /gridpnts/ Ncols,Nrows,Nsmax,Nsoil
@@ -337,6 +350,10 @@ open(uflx, file = trim(runid)//'flux.txt')
 open(usta, file = trim(runid)//'stat.txt')
 #endif
 
+! Starting time
+call system_clock(count_0, count_rate, count_max)
+time_init = count_0*1.0/count_rate
+
 ! Run the model
 EoF = .false.
 do
@@ -401,5 +418,15 @@ close(udmp)
 #if PROFNC == 1
 status = nf90_close(ncid) 
 #endif
+
+
+
+call system_clock(count_1, count_rate, count_max)
+   time_final = count_1*1.0/count_rate
+   ! Elapsed time
+   elapsed_time = time_final - time_init
+
+   write(*,*) "Time elapsed:", elapsed_time
+
 
 end program FSM2
