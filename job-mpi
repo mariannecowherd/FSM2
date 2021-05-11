@@ -10,4 +10,5 @@
 module load openmpi
 
 #run the application:
-mpirun ./FSM2
+mpirun ./FSM2_MPI
+
