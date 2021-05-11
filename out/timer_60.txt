@@ -1,0 +1,81 @@
+P8    Elapsed wall clock time =    31.1295     seconds.
+ P           8  started:           9
+ ended          10
+
+P2    Elapsed wall clock time =    31.1386     seconds.
+ P           2  started:           3
+ ended           4
+
+P*    Elapsed wall clock time =    31.1602     seconds.
+ P          13  started:          14
+ ended          15
+
+P*    Elapsed wall clock time =    31.1607     seconds.
+ P          14  started:          15
+ ended          16
+
+P*    Elapsed wall clock time =    31.1628     seconds.
+ P          18  started:          19
+ ended          20
+
+P5    Elapsed wall clock time =    31.1647     seconds.
+ P           5  started:           6
+ ended           7
+
+P*    Elapsed wall clock time =    31.1686     seconds.
+ P          19  started:          20
+ ended          20
+
+P*    Elapsed wall clock time =    31.1764     seconds.
+ P          10  started:          11
+ ended          12
+
+P*    Elapsed wall clock time =    31.1784     seconds.
+P          16  started:          17
+ ended          18
+
+P9    Elapsed wall clock time =    31.1828     seconds.
+ P           9  started:          10
+ ended          11
+
+P*    Elapsed wall clock time =    31.1854     seconds.
+ P          17  started:          18
+ ended          19
+
+P3    Elapsed wall clock time =    31.1918     seconds.
+ P           3  started:           4
+ ended           5
+
+P4    Elapsed wall clock time =    31.1938     seconds.
+ P           4  started:           5
+ ended           6
+
+P6    Elapsed wall clock time =    31.1974     seconds.
+ P           6  started:           7
+ ended           8
+P           6  started:           7
+ ended           8
+
+P7    Elapsed wall clock time =    31.2004     seconds.
+ P           7  started:           8
+ ended           9
+
+P*    Elapsed wall clock time =    31.2086     seconds.
+ P          15  started:          16
+ ended          17
+
+P*    Elapsed wall clock time =    31.2153     seconds.
+ P          12  started:          13
+ ended          14
+
+P*    Elapsed wall clock time =    31.2392     seconds.
+ P          11  started:          12
+ ended          13
+
+P0    Elapsed wall clock time =    32.0345     seconds.
+ P           0  started:           1
+ ended           2
+
+P1    Elapsed wall clock time =    34.4342     seconds.
+ P           1  started:           2
+ ended           3
