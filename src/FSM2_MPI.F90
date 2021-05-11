@@ -329,7 +329,7 @@ allocate(fsat(Nsoil))
 allocate(Tprf(Nsoil))
 fsat = 0.5
 Tprf = 285
-start_file = 'Sod_1314_dump'
+start_file = 'none'
 ! read(5,initial)
 do k = 1, Nsoil
   Tsoil(k,:,:) = Tprf(k)
@@ -427,9 +427,9 @@ do
   end do
 
 
-  !  call FSM2_OUTPUT(Ncols,rows_per,year,month,day,hour,                    &
-  !                   H,LE,LWout,LWsub,Melt,Roff,snd,snw,subl,svg,SWout,  &
-  !                   SWsub,Tsoil,Tsrf,Tveg,Usub,VAI)
+    call FSM2_OUTPUT(Ncols,rows_per,year,month,day,hour,                    &
+                     H,LE,LWout,LWsub,Melt,Roff,snd,snw,subl,svg,SWout,  &
+                     SWsub,Tsoil,Tsrf,Tveg,Usub,VAI)
 
 
 end do
@@ -467,3 +467,4 @@ close(udmp)
     call MPI_Finalize ( error )
 
 end program FSM2
+
