@@ -1,3 +1,5 @@
+########################################################################
+# Flexible Snow Model compilation script                               #
 #                                                                      #
 # Richard Essery                                                       #
 # School of GeoSciences                                                #
@@ -25,10 +27,11 @@ cat > OPTS.h << EOF
 #define PROFNC 0   /* netCDF output                 : 0, 1            */
 EOF
 
-$FC -cpp -o FSM2 FSM2_MODULES.F90 FSM2_MPI.F90 FSM2_DRIVE.F90          \
+$FC -cpp -o FSM2_MPI FSM2_MODULES.F90 FSM2_MPI.F90 FSM2_DRIVE.F90          \
 FSM2_MAP.F90 FSM2_OUTPUT.F90 FSM2_PARAMS.F90 FSM2_TIMESTEP.F90         \
 CANOPY.F90 INTERCEPT.F90 LUDCMP.F90 PSIMH.F90 QSAT.F90 SNOW.F90        \
 SOIL.F90 SOLARPOS.F90 SRFEBAL.F90 SWRAD.F90 THERMAL.F90 TRIDIAG.F90    \
 TWOSTREAM.F90
-mv FSM2 ../FSM2
+mv FSM2_MPI ../FSM2_MPI
 rm *.mod
+cd ..
